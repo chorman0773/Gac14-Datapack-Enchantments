@@ -6,6 +6,7 @@ import java.util.function.Predicate;
 
 import github.chorman0773.gac14.enchantment.core.enchantment.Gac14Enchantment;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
@@ -29,4 +30,9 @@ public interface Conditions {
 	public static BiPredicate<ItemStack,EntityLivingBase> biomePredicate(Predicate<Biome> condition){
 		return (t,e)->condition.test(e.getEntityWorld().getBiome(e.getPosition()));
 	}
+	
+	public static BiPredicate<ItemStack,EntityLivingBase> entityType(Predicate<EntityType<?>> condition){
+		return (t,e)->condition.test(e.getType());
+	}
+	
 }

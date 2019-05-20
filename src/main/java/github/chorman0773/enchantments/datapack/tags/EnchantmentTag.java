@@ -3,6 +3,7 @@ package github.chorman0773.enchantments.datapack.tags;
 import java.util.Collection;
 
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 
